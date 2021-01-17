@@ -261,11 +261,12 @@ aside {
 }
 @media (max-width: 1200px) {
   .contener {
-    width: 100px;
+    width: 100%;
     margin: inherit;
   }
 
   header :nth-child(3) {
+    height: inherit;
     width: 100%;
   }
   header :nth-child(3) div {
@@ -277,14 +278,25 @@ aside {
   }
   main {
     margin-left: 20px;
+    box-sizing: border-box;
+    padding-left: 10vw;
 
     width: 100%;
+  }
+  .Meal:hover {
+    z-index: 50;
   }
 
   .panier-on,
   .panier-off {
     min-width: 250px;
     margin-right: 20px;
+  }
+}
+@media (max-width: 750px) {
+  main {
+    margin-left: 0px;
+    padding-left: inherit;
   }
 }
 @media (max-width: 651px) {
@@ -297,10 +309,12 @@ aside {
   }
   main {
     margin-left: 0px;
+    padding-left: inherit;
   }
   .panier-on,
   .panier-off {
     width: 100%;
     max-width: 200px;
+    margin-right: inherit;
   }
 }

@@ -37,7 +37,7 @@ function App() {
       newTab.push({
         name: product.title,
         number: 1,
-        value: Number(product.price),
+        value: Number(product.price).toFixed(2),
       });
     }
     setOrder(newTab);
@@ -48,6 +48,7 @@ function App() {
     subTotal += ele.value * ele.number;
   });
   const total = subTotal + livraison;
+
   return (
     <div className="App">
       {isLoading ? (
@@ -120,7 +121,7 @@ function App() {
                 <div>
                   <div>
                     <span>Sous-total</span>
-                    <em> {subTotal}€</em>
+                    <em> {subTotal.toFixed(2)}€</em>
                   </div>
                   <div>
                     <span>Frais de livraison</span>
@@ -129,7 +130,7 @@ function App() {
                 </div>
                 <div>
                   <strong>Total</strong>
-                  <strong> {total} €</strong>
+                  <strong> {total.toFixed(2)} €</strong>
                 </div>
               </aside>
             )}
