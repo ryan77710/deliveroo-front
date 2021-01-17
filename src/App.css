@@ -1,38 +1,306 @@
 .App {
-  text-align: center;
+  background-color: rgb(248, 244, 244);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chargement {
+  background-color: rgb(129, 212, 212);
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: wait;
+}
+button:hover {
+  cursor: pointer;
+}
+.chargement :nth-child(1) {
+  margin-top: 70px;
+  height: 50%;
+  width: 50%;
+  border-radius: 40px;
+  background-color: wheat;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.63);
+}
+.chargement p {
+  margin-top: 30px;
+  font-size: 50px;
+  color: white;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+}
+.contener {
+  width: 1200px;
+  margin: 0 auto;
+}
+header {
+  background-color: white;
+}
+header :nth-child(1) img {
+  width: 170px;
+}
+header :nth-child(3) {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 255px;
+}
+header :nth-child(3) div {
+  width: 800px;
+}
+header :nth-child(3) img {
+  width: 355px;
+  height: 200px;
+  border-radius: 5px;
+}
+header :nth-child(3) h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 37px;
+}
+header :nth-child(3) p {
+  line-height: 30px;
+  font-size: 21px;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+main {
+  width: 820px;
+}
+/* .Categorie:hover {
+   box-shadow: 17px 18px 10px -3px rgba(18, 18, 18, 0.24);
+  -webkit-box-shadow: 17px 18px 10px -3px rgba(18, 18, 18, 0.24);
+  -moz-box-shadow: 17px 18px 10px -3px rgba(18, 18, 18, 0.24);} */
+
+.Categorie h2 {
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap > :nth-child(odd) {
+  margin-right: 20px;
+}
+.Meal {
+  background-color: white;
+  width: 400px;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  height: 162px;
+}
+
+.Meal:hover {
+  /* cursor: pointer;
+  box-shadow: -15px -12px 14px 0px rgba(164, 145, 145, 0.65) inset;
+  -webkit-box-shadow: -15px -12px 14px 0px rgba(164, 145, 145, 0.65) inset;
+  -moz-box-shadow: -15px -12px 14px 0px rgba(164, 145, 145, 0.65) inset; */
+
+  box-shadow: 17px 18px 10px -3px rgba(18, 18, 18, 0.24);
+  -webkit-box-shadow: 17px 18px 10px -3px rgba(18, 18, 18, 0.24);
+  -moz-box-shadow: 17px 18px 10px -3px rgba(18, 18, 18, 0.24);
+  cursor: pointer;
+}
+
+.Meal h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+.Meal p {
+  margin-bottom: 18px;
+  color: rgb(134, 131, 131);
+  height: 40px;
+  overflow: hidden;
+  line-height: 20px;
+  box-sizing: border-box;
+  padding-left: 8px;
+}
+.Meal img {
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+}
+.none-img {
+  background-color: rgb(241, 239, 239);
+}
+.Meal span {
+  margin-right: 20px;
+  font-size: 18px;
+}
+.Meal b {
+  font-weight: bold;
+  color: rgb(248, 132, 0);
+}
+.Meal b :nth-child(1) {
+  margin-right: 5px;
+}
+aside {
+  width: 350px;
+  /* height: 283px; */
+  border-radius: 5px;
+  padding: 10px;
+  background-color: white;
+  box-sizing: border-box;
+  position: sticky;
+  top: 25px;
+  right: 0px;
+}
+.panier-off {
+  height: 185px;
+  cursor: not-allowed;
+}
+.panier-off button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: lightgrey;
+  border-radius: 5px;
+  color: darkgrey;
+  margin-bottom: 50px;
+  cursor: not-allowed;
+}
+.panier-off p {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: lightgrey;
+  font-size: 17px;
+}
+/* .panier-on:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0, 145, 117, 0.69);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 145, 117, 0.69);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 145, 117, 0.69);
+} */
+.panier-on button {
+  background-color: rgb(79, 165, 161);
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.panier-on > div:nth-child(2) {
+  border-bottom: grey solid 1px;
+  font-size: 16.5px;
+  display: flex;
+  flex-direction: column;
+}
+.panier-on > div:nth-child(2) button:nth-child(1) {
+  margin-right: 3px;
+}
+.panier-on > div:nth-child(2) button:nth-child(2) {
+  margin-left: 3px;
+}
+.order {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.order div {
+  display: flex;
+  align-items: center;
+}
+.panier-on p {
+  width: 135px;
+}
+.order button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 20px;
+  background-color: inherit;
+  border: solid 1px rgb(79, 165, 161);
+  border-radius: 50%;
+  color: rgb(79, 165, 161);
+}
+
+.panier-on > div:nth-child(3) {
+  border-bottom: grey solid 1px;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.panier-on > div:nth-child(3) div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16.5px;
+}
+.panier-on > div:nth-child(3) div:nth-child(1) {
+  margin-bottom: 20px;
+}
+.panier-on > div:nth-child(4) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 50px;
+  font-size: 19px;
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .contener {
+    width: 100px;
+    margin: inherit;
   }
-  to {
-    transform: rotate(360deg);
+
+  header :nth-child(3) {
+    width: 100%;
+  }
+  header :nth-child(3) div {
+    width: 70%;
+  }
+  .main {
+    margin-top: 30px;
+    width: 100%;
+  }
+  main {
+    margin-left: 20px;
+
+    width: 100%;
+  }
+
+  .panier-on,
+  .panier-off {
+    min-width: 250px;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 651px) {
+  header :nth-child(3) {
+    flex-direction: column;
+    height: inherit;
+  }
+  header :nth-child(3) img {
+    margin-top: 20px;
+  }
+  main {
+    margin-left: 0px;
+  }
+  .panier-on,
+  .panier-off {
+    width: 100%;
+    max-width: 200px;
   }
 }
