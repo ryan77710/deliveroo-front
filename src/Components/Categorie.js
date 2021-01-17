@@ -1,7 +1,7 @@
 import Meal from "./Meal";
 
 const Categorie = (props) => {
-  const { categorie, order, setOrder } = props;
+  const { categorie } = props;
 
   return (
     <div className="Categorie">
