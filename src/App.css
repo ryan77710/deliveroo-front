@@ -3,33 +3,28 @@
 }
 
 .chargement {
-  background-color: rgb(129, 212, 212);
+  background: linear-gradient(transparent, rgb(129, 212, 212));
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  cursor: wait;
 }
 button:hover {
   cursor: pointer;
 }
-.chargement :nth-child(1) {
-  margin-top: 70px;
-  height: 50%;
-  width: 50%;
-  border-radius: 40px;
-  background-color: wheat;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.63);
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.63);
-  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.63);
-}
+
 .chargement p {
+  display: flex;
   margin-top: 30px;
   font-size: 50px;
   color: white;
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
 }
+.chargement p :nth-child(1) {
+  margin-right: 45px;
+}
+
 .contener {
   width: 1200px;
   margin: 0 auto;

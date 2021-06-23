@@ -7,6 +7,8 @@ import Categorie from "./Components/Categorie";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import Order from "./Components/Order";
+import { SpinnerDotted } from "spinners-react";
+
 library.add(faStar);
 
 function App() {
@@ -53,9 +55,10 @@ function App() {
     <div className="App">
       {isLoading ? (
         <header className="chargement">
-          <img src={deliveroo} alt="greg" />
           <p>
-            Pause !!! Veillez attendre le chargement des données 3. 2. 1. 🚀 !!!
+            <SpinnerDotted size={50} thickness={200} color="#ffff" />
+            {"  "}
+            Chargement ...
           </p>
         </header>
       ) : (
